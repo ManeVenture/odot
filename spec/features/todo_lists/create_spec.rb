@@ -47,7 +47,7 @@ describe "Creating todo lists" do
 	it "displays an error when the todo list has no description" do
 		expect(TodoList.count).to eq(0)
 		
-		create_todo_list Description: ""
+		create_todo_list description: ""
 		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
@@ -59,7 +59,7 @@ describe "Creating todo lists" do
 	it "displays an error when the todo list has no description" do
 		expect(TodoList.count).to eq(0)
 		
-		create_todo_list Description: "few"
+		create_todo_list description: "few"
 		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
